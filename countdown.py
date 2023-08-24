@@ -10,7 +10,7 @@ def timer_display(timer):
     if minutes == 60:
         minutes = 0
 
-    print(f"{hours}:{minutes}:{seconds}")
+    print(f"{hours:02}:{minutes:02}:{seconds:02}")
 
 
 timer = 0
@@ -23,11 +23,11 @@ seconds = 10
 timer = (hours * 3600) + (minutes * 60) + seconds
 
 
-for second in range(timer, 0, -1):
-    # os.system("cls")
+for _ in range(timer, 0, -1):
+    os.system("cls")
 
     timer_display(timer)
     timer -= 1
     time.sleep(1)
 
-print("0:0:0")
+print("00:00:00")
